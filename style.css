@@ -39,7 +39,7 @@ nav > div {
 nav a {padding:0 10px 0 10px;border-left:2px solid black;}
 nav>div:first-child a{border: none}
 nav>div:last-child {border-right: #8A2BE2 solid 2px;}/*nouveau*/
-.submenu{background-color:black;position:absolute;top:50px;left:0px;display:none}
+.submenu{background-color:black;position:absolute;top:100%;left:0px;display:none}
 div:hover .submenu{display:block;}
 nav div {width:100%;}
 header {display:flex;align-items:flex-end;background-color: #111111}
