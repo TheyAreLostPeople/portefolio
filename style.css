@@ -2,7 +2,7 @@
 a:visited {color: white;}
 a:hover {color: orange}
 h3 {font-style:italic;text-align:center;color: white;}
-h1 {color:lime;text-align: center;margin-top: 0px;}
+h1 {font-style:italic;text-align:center;color: white;}
 .pair {
 background-color:white;
 }
@@ -44,30 +44,67 @@ div:hover .submenu{display:block;}
 nav div {width:100%;}
 header {display:flex;align-items:flex-end;background-color: #111111}
 main {display:flex;height: 90vh;}
-description {width:300px;background-color:grey;flex-shrink: 1;flex-grow: 1;height: 100%;}
-aside {width:200px;background-color:white;flex-shrink: 2;flex-grow: 3;height: 100%;}
+article {width:300px;background-color:grey;flex-shrink: 1;flex-grow: 1;}
+aside {width:200px;background-color:white;flex-shrink: 2;flex-grow: 3;}
 .puce {visibility:hidden;}
 div:hover .puce{visibility:visible;}
 .submenu {border: #8A2BE2 solid 2px}
 
-h1:hover {border-block: inset;}
-
 table {margin-left: 10%;margin-right: 10%;}
 .burger{display: none;}
-@media(max-width:768px){
-table{display: table-column;}
-@media(max-width:480px){
-main{flex-direction: column;}
-nav{display: none;}
-.burger{display: flex;flex-direction: column;position:fixed;top:10px;right:10px;}
-#menu2{display:none;}
-.burger:hover > #menu2 {display: flex;flex-direction: column;}
-.burger:hover {height:100vh;width:80vw;background-color: black;}
+
+article div {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	border: groove 2px;
+	width: 90%;
 }
-@media(max-width:168px){
-article{display:none;}
-header{display:none;}
-footer{display:none;}
-h2{display:none;}
-ul{display:none;}
+
+/* animation */
+
+nav > div:hover {
+	animation-name: selected;
+	animation-duration: 1s;
+	width: 200%;
+}
+
+nav > div {
+	animation-name: unselected;
+	animation-duration: 1s;
+	width: 100%;
+}
+
+@keyframes selected {
+	from {width: 100%;}
+	to {width: 200%;}
+}
+
+@keyframes unselected {
+	from {width: 200%;}
+	to {width: 100%;}
+}
+
+@media(max-width:768px) {/*tablette*/
+	table{display: table-column;
+}
+
+@media(max-width:480px) {/*phone*/
+	main{flex-direction: column;}
+	article {width: 100%;}
+	aside {width: 100%;}
+	nav{display: none;}
+	.burger{display: flex;flex-direction: column;position:fixed;top:10px;right:10px;}
+	#menu2{display:none;}
+	.burger:hover > #menu2 {display: flex;flex-direction: column;}
+	.burger:hover {height:100vh;width:80vw;background-color: black;}
+}
+
+@media(max-width:168px) {/*smart watch*/
+	header{display:none;}
+	main{height: 100vh;}
+	article{display:none;}
+	footer{display:none;}
+	h2{display:none;}
+	ul{display:none;}
 }
