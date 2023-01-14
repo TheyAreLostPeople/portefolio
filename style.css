@@ -1,5 +1,4 @@
-﻿blockquote > h3 {font-style:italic;text-align:center;color: red;text-shadow: 3px 1px purple;}
-a {text-decoration: none; color: red;}
+﻿a {text-decoration: none; color: red;}
 a:visited {color: white;}
 a:hover {color: orange}
 h1 {font-style:italic;color: white;}
@@ -42,15 +41,26 @@ nav>div:last-child {border-right: #8A2BE2 solid 2px;}/*nouveau*/
 .submenu{background-color:black;position:absolute;top:100%;display:none}
 div:hover .submenu{display:block;}
 nav div {width:100%;}
-header {display:flex;align-items:flex-end;background-color: #111111}
-main {display:flex;height: 90vh;}
-aside {width:200px;background-color:white;flex-shrink: 2;flex-grow: 3;}
 .puce {visibility:hidden;}
 div:hover .puce{visibility:visible;}
 .submenu {border: #8A2BE2 solid 2px}
-
 table {margin-left: 10%;margin-right: 10%;}
 .burger{display: none;}
+
+cite:before {
+	content: "« ";
+}
+
+cite:after {
+	content: " »";
+}
+
+blockquote > h3 {
+	font-style:italic;
+	text-align:center;
+	color: red;
+	text-shadow: 3px 1px purple;
+}
 
 nav > div > a {
 	width: 100%;
@@ -59,6 +69,9 @@ nav > div > a {
 	justify-content: center;
 	align-items: center;
 }
+
+header {display:flex;align-items:flex-end;background-color: #111111}
+main {display:flex;height: 90vh;}
 
 article {
 	width:300px;
@@ -90,13 +103,7 @@ article div {
 	padding-bottom: 3%;
 }
 
-cite:before {
-	content: "« ";
-}
-
-cite:after {
-	content: " »";
-}
+aside {width:200px;background-color:#FFFFF999;flex-shrink: 2;flex-grow: 3;}
 
 /* animation */
 
